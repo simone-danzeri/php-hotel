@@ -57,14 +57,28 @@ $hotels = [
   <!--Bootstrap link-->
 </head>
 <body>
-    <?php
-    foreach($hotels as $eachHotel) {
-        var_dump($eachHotel);
-        foreach($eachHotel as $info) {
-            echo $info . '<br>';
-        }
-    }
-    ?>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Parking</th>
+      <th scope="col">Vote</th>
+      <th scope="col">Distance to center</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php foreach($hotels as $eachHotel) { ?>
+        <tr>
+          <th scope="row"> <?php echo $eachHotel['name']; ?> </th>
+          <td> <?php echo $eachHotel['description']; ?> </td>
+          <td> <?php echo $eachHotel['parking']; ?> </td>
+          <td> <?php echo $eachHotel['vote']; ?>/5</td>
+          <td> <?php echo $eachHotel['distance_to_center']; ?> km</td>
+        </tr>
+    <?php } ?>
+  </tbody>
+</table>
   <!--Bootstrap JS link-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <!--Bootstrap JS link-->
