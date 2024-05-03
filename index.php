@@ -72,7 +72,7 @@ $hotels = [
         <tr>
           <th scope="row"> <?php echo $eachHotel['name']; ?> </th>
           <td> <?php echo $eachHotel['description']; ?> </td>
-          <td> <?php echo $eachHotel['parking']; ?> </td>
+          <td> <?php echo $eachHotel['parking'] === true ? 'Yes' : 'No'; ?> </td>
           <td> <?php echo $eachHotel['vote']; ?>/5</td>
           <td> <?php echo $eachHotel['distance_to_center']; ?> km</td>
         </tr>
